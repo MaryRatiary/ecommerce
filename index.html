@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.CSS">
+
+    <title> tee-shop</title>
+
+
+   
+</head>
+<body >
+    <header class="bb">
+
+    </header>
+
+<nav class="navbar"> 
+    <ul class="navbar-menu">
+        <li><a href="boutique">boutique</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="#promotions">Promotions</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="logo">
+       <img src="logohome.png" alt="Logo principal">
+    </div>
+</nav>
+<section>
+    <div class="sectionpp"> 
+        <h1>styckers land </h1>
+        <p>Découvrez notre collection de vêtements premium, où style et confort se rencontrent !T-shirts tendances, pulls chauds et élégants,<br>
+             chaque pièce est conçue avec des matériaux de qualité pour vous offrir un look unique et durable.Que ce soit pour une journée <br>
+              décontractée ou une sortie spéciale, nos vêtements s'adaptent à toutes les occasions. Adoptez un style qui vous ressemble <br>
+               ressemble et faites de chaque tenue un statement !</p>
+      </div> 
+</section>
+<div class="image-slider">
+    <div class="slider-track" style="height: 200px;" style="border-radius:12px;">
+        <Img src="t-shirt-oversize-délavé-à-broderie,-blue.jpg" alt="tee-shirt oversize homme">   
+        <img src="t-shirt-oversize-homme-signature(1).jpg" alt="oversize etoile maroc">
+        <img src="tee-shirt-oversize-style-vintage-etoile-du-maroc-931_5000x.jpg" alt=" oversize pour bleu">
+        <img src="pull-oversize-à-imprimé-abstrait,-orange.jpg" alt="pull oversize">
+        <img src="surchemise-à-carreaux,-red.jpg" alt=" surchemise-à-carreaux">
+        <img src="baskets-à-plateforme-en-faux-daim,-black.jpg" alt="baskets-à-plateforme-en-faux-daim">
+        </div>
+</div>
+
+    <!-- Section d'accueil -->
+    <section class="banner">
+        <h2>Découvrez nos collections tendances</h2>
+        <p>Des t-shirts stylés et des pulls confortables pour toutes les occasions.</p>
+        <a href="#catalogue" class="btn">Voir la collection</a>
+    </section>
+
+    <!-- Catalogue -->
+    <section id="catalogue">
+        <h2>Notre Catalogue</h2>
+        <div class="products">
+            <article class="product">
+                <img src="t-shirt-oversize-homme-signature.jpg" alt="T-shirt classique">
+                <h3>T-shirt Classique</h3>
+                <p>Prix : 100.000ar</p>
+                <button>Ajouter au panier</button>
+            </article>
+            <article class="product">
+                <img src="pull-oversize-à-imprimé-abstrait,-orange.jpg" alt="Pull chaud">
+                <h3>Pull Chaud</h3>
+                <p>Prix : 150.000ar</p>
+                <button>Ajouter au panier</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Promotions -->
+    <section id="promotions">
+        <h2>Promotions en cours</h2>
+        <p>-20% sur tous les pulls cet hiver !</p>
+        <a href="#catalogue" class="btn">Profitez-en</a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form action="contact.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Ma Boutique. Tous droits réservés.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    
+   <script>
+  const sliderTrack = document.querySelector('.slider-track');
+  const images = Array.from(sliderTrack.children);
+
+  let position = 0; // Position de la piste
+  const imageWidth = images[0].clientWidth; // Largeur d'une image
+  const speed = 2; // Vitesse de déplacement (ajuste cette valeur)
+
+  // Clone les images pour un effet de boucle fluide
+  images.forEach((image) => {
+    const clone = image.cloneNode(true);
+    sliderTrack.appendChild(clone);
+  });
+
+  function scrollImages() {
+    position -= speed; // Déplace la piste vers la gauche
+
+    // Si la première image est complètement sortie de la vue
+    if (position <= -imageWidth) {
+      position += imageWidth; // Réinitialise la position
+      sliderTrack.appendChild(sliderTrack.children[0]); // Déplace la première image à la fin
+    }
+
+    // Applique la transformation
+    sliderTrack.style.transform = `translateX(${position}px)`;
+
+    requestAnimationFrame(scrollImages); // Continue l'animation
+  }
+
+  scrollImages();
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+

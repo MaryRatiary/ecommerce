@@ -1,0 +1,303 @@
+/* Styles généraux */
+.sectionpp h1{
+   font-size: 40px;
+   color: rgb(30, 48, 108);
+   size-adju;
+}
+.sectionpp{
+    color: rgb(5, 5, 5);
+    padding: 100px;
+    left: 0;
+    text-align: center;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+a {
+    text-decoration: none;
+    color: #edeeef;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0dff00;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d35030;
+}
+
+
+.navbar {
+    background-color: #671919; /* Couleur de fond */
+    height: 40px; /* Hauteur de la barre */
+    display: flex; /* Utilisation du modèle Flexbox */
+    text-align: center; /* Centre les éléments verticalement */
+    padding: 0; /* Espacement interne sur les côtés */
+    gap: 50px;
+    list-style: none;
+    justify-content: flex-end;
+    height: 100px;
+    z-index: 1000; 
+    position: fixed; 
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.navbar-menu {
+    display: flex;
+    color: rgba(235, 9, 9, 0.733); /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 100px;
+    padding: 5px 10px; /* Espacement interne des liens */
+    margin: 30px;
+    padding: -15px;
+    gap: 60px; /* Espacement entre les éléments */
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: medium;
+    max-width: 570px;
+}
+.logo img {
+    height: 50px;}
+
+
+/* Style pour le conteneur */
+.image-slider {
+        width: 100%; /* Largeur visible */
+        overflow: hidden; /* Cache ce qui dépasse */
+        position: relative;
+        height: 200px; /* Ajuste selon la hauteur des images */
+    }
+  
+  /* Style pour la piste des images */
+  .slider-track {
+    display: flex; /* Aligne les images horizontalement */
+  position: relative;
+  will-change: transform; /* Animation de transition */
+  }
+  
+  /* Style des images */
+  .slider-track img {
+    width: 200px; /* Ajuste la largeur de l'image */
+  height: auto;
+  flex-shrink: 0; /* Empêche la réduction des images */
+  margin-right: 20px;
+}
+  
+  /* Animation pour le défilement */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+  }
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Bannière */
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: #070707;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+}
+
+.banner p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.banner .btn {
+    background-color: #007bff;
+    color: #020202;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.banner .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Catalogue */
+#catalogue {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#catalogue h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.products {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+}
+
+.product p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Promotions */
+#promotions {
+    background-color: #007bff;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    height: auto;
+
+}
+
+#promotions h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#promotions p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#promotions .btn {
+    background-color: #fff;
+    color: #007bff;
+    font-weight: bold;
+}
+
+#promotions .btn:hover {
+    background-color: #f9f9f9;
+}
+
+/* Formulaire de contact */
+#contact {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #007bff;
+}
+
+footer .social-media a:hover {
+    color: #0056b3;
+}
